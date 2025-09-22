@@ -12,8 +12,6 @@ Synrax AI Agent provides a secure, scalable, and intelligent conversational inte
 
 ## ✨ Key Features
 
-## ✨ Key Features
-
 ### 🌐 **Advanced Web Interface**
 - **Modern UI**: Responsive design with real-time conversation management
 - **Multi-User Support**: Complete user authentication and session management
