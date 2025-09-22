@@ -909,7 +909,7 @@ Before submitting:
 
 ### 📞 **Getting Help**
 
-- 📧 **Email**: martin.sebastian@synrax.com
+- 📧 **Email**: martinadriansebastian@gmail.com
 - 💬 **Discussions**: Use GitHub Discussions for questions
 - 🐛 **Issues**: GitHub Issues for bugs and features
 - 📖 **Documentation**: Check the README and code comments
