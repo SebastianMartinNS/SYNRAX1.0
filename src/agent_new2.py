@@ -19,6 +19,17 @@ class AIAgent:
             self.config = config or Config()
             self.memory = AgentMemory()
             self.rag = RAGSystem()
+            
+            # Initialize with default documents for RAG system
+            default_docs = [
+                "Synrax AI Agent is an enterprise-grade artificial intelligence assistant with advanced Retrieval-Augmented Generation (RAG) capabilities.",
+                "The system provides secure user authentication, conversation management, and intelligent document retrieval.",
+                "Built with FastAPI, it supports JWT authentication, rate limiting, and comprehensive security features.",
+                "The AI agent uses Ollama for local language model inference and ChromaDB for vector storage.",
+                "Key features include multi-user support, conversation history, file upload capabilities, and real-time AI responses."
+            ]
+            self.ingest_documents(default_docs)
+            
             try:
                 self.llm = ChatOllama(
                     base_url=self.config.ollama_host,

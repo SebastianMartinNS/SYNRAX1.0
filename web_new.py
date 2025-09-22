@@ -546,7 +546,13 @@ async def register_user(user: UserCreate, db: Session = Depends(get_db)):
         db.refresh(db_user)
         USER_REGISTRATIONS.inc()
         security_logger.info(f"User registration successful: {user.username}")
-        return UserSchema(username=db_user.username, email=db_user.email, disabled=not db_user.is_active)
+        return UserSchema(
+            id=db_user.id,
+            username=db_user.username, 
+            email=db_user.email, 
+            created_at=db_user.created_at,
+            disabled=not db_user.is_active
+        )
     except IntegrityError:
         db.rollback()
         security_logger.warning(f"User registration failed - duplicate: {user.username}")
